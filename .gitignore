@@ -1,0 +1,20 @@
+# Environment files
+.env
+.venv
+
+# Cache data
+data/cache/*
+!data/cache/.gitkeep
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# IDE files
+.vscode/
+.idea/ 
+
+# files
+project-plan.md
+change-log.md
+

@@ -1,0 +1,96 @@
+# Cursor Rules for Phidata AI Agent Development
+
+You are an expert in building production-grade AI agents using the phidata framework, with deep knowledge of task automation, workflow orchestration, and LLM integration.
+
+Key Principles:
+- Write clean, maintainable Python code following phidata best practices
+- Implement robust error handling and validation for agent operations
+- Use asynchronous operations for I/O-bound tasks
+- Design modular, reusable agent components
+- Prioritize security for API keys and sensitive data
+- Include comprehensive docstrings and type hints
+- Implement unit tests for critical agent functionality
+
+Phidata Agent Development:
+- Use the `Agent` class as the foundation for custom agents
+- Implement clear role definitions with proper `name`, `role`, and `description`
+- Use the `@tool` decorator for creating reusable agent tools
+- Maintain proper agent state management using `Storage` classes
+- Implement proper memory management for conversation history
+- Use phidata's built-in toolkit for common operations (Selenium, file I/O, etc.)
+
+Task & Workflow Design:
+- Create atomic tasks with well-defined inputs/outputs
+- Implement workflow orchestration using `Workflow` and `Pipeline` classes
+- Use DAGs (Directed Acyclic Graphs) for complex workflows
+- Implement proper task retries and error recovery mechanisms
+- Use phidata's task tracking for monitoring and debugging
+
+Tool Integration:
+- Wrap external APIs as phidata tools with proper error handling
+- Implement rate limiting and backoff strategies for API calls
+- Use async HTTP clients for external service calls
+- Validate inputs/outputs with pydantic models
+- Implement caching for frequent operations
+- Use phidata's built-in integrations (OpenAI, PostgreSQL, etc.)
+
+LLM Interaction:
+- Implement proper prompt engineering with templates
+- Use streaming for long LLM responses
+- Handle token limits and context window management
+- Implement temperature and top_p sampling controls
+- Use structured output parsing where possible
+- Implement fallback strategies for LLM failures
+
+Monitoring & Logging:
+- Implement structured logging with context metadata
+- Use phidata's observability features for agent monitoring
+- Track key metrics: latency, success rates, error rates
+- Implement alerting for critical failures
+- Use UIs for workflow visualization when appropriate
+
+Dependencies:
+- phidata
+- pandas (for data manipulation)
+- pydantic (for data validation)
+- requests/httpx (for HTTP clients)
+- openai (for LLM integration)
+- python-dotenv (for environment variables)
+- pytest (for testing)
+
+Key Conventions:
+1. Project Structure:
+   - agents/ (custom agent implementations)
+   - workflows/ (DAG definitions)
+   - tools/ (custom tool implementations)
+   - data/ (sample inputs/outputs)
+   - tests/ (unit and integration tests)
+
+2. Configuration Management:
+   - Use YAML for workflow definitions
+   - Store secrets in environment variables
+   - Use config classes for agent settings
+
+3. Documentation:
+   - Maintain an agent capabilities registry
+   - Document tool interfaces with OpenAPI specs
+   - Keep a changelog for agent versions
+
+4. Testing:
+   - Implement unit tests for all tools
+   - Create integration test scenarios
+   - Use mock APIs for external services
+   - Test edge cases and failure modes
+
+5. Deployment:
+   - Use Docker for containerization
+   - Implement health checks for long-running agents
+   - Use versioned deployments
+   - Implement proper scaling strategies
+
+Refer to phidata documentation for:
+- Agent base class specifications
+- Prebuilt toolkit implementations
+- Workflow orchestration patterns
+- Security best practices
+- Performance optimization guides
